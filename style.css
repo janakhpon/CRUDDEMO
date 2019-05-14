@@ -1,0 +1,111 @@
+body,html{
+    background-image:
+    linear-gradient(
+      to right, 
+      rgb(7,90,122), #119b1d
+    );
+    background-repeat: no-repeat;
+    color:white;
+    margin:0;
+    padding: 0;
+    overflow-y: hidden;
+
+}
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top:20%;
+    justify-content: space-around;
+}
+
+.container__item{
+    padding: 5px;
+    font-weight: bold;
+    flex-basis: auto;
+}
+
+.row{
+    flex-flow: row wrap;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+
+label {
+
+    padding: 0.2rem;
+    margin-right: 0.5rem;
+   
+}
+
+.row > input[type=text]{
+    margin:0.5rem;
+    border:0px;
+    border-bottom: 2px solid blue;
+    background:rgb(7, 90, 122);
+}
+
+.row > input[type=password]{
+    margin:0.5rem;
+    border:0px;
+    border-bottom: 2px solid blue;
+    background:rgb(7, 90, 122);
+}
+
+.row > input[type=password]:focus{
+   outline: none;
+   background:rgb(23, 159, 212, 0.2);
+   border-bottom: 0px solid blue;
+   color:rgba(246, 248, 248);
+   padding: 0.5rem;
+   transform: scale(1.1,1);
+   transition: 0.5s;
+    
+}
+
+.row > input[type=text]:focus{
+    outline: none;
+    background:rgb(23, 159, 212, 0.2);
+    border-bottom: 0px solid blue;
+    color:rgba(246, 248, 248);
+    padding: 0.5rem;
+    transform: scale(1.1,1);
+    transition: 0.5s;
+     
+ }
+
+
+.button{
+    margin: 1rem;
+    padding: 0.2rem;
+    width: 10rem;
+    height: 1.7rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    align-self: center;
+}
+
+.row > .button{
+    align-items: stretch;
+    background: rgb(190, 76, 181);
+
+}
+
+
+.row > input[type=submit]:focus{
+    outline: none;
+
+     
+ }
+
+ .button:active{
+    transform: scale(0.8) translate(0px, 5px);
+    background: rgb(42, 73, 141, 0.2);
+    transition-timing-function: ease-in;
+    transition: 0.5s;
+ }
+
+
+
