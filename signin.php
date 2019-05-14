@@ -18,9 +18,9 @@
             header("Location:index.php?message=NotFound!");
         }else{
             while($row=mysqli_fetch_assoc($result)){
-                if($row['password'] != $password){
+                if(!password_verify($password, $row['password'])){
                     header("Location:index.php?message=NotFound!");
-                }else if($row['password'] == $password){
+                }else if(password_verify($password, $row['password'])){
                     $_SESSION['id'] = $row['id'];
                     $_SESSION['username'] = $row['username'];
                     $_SESSION['name'] = $row['name'];

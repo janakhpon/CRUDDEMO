@@ -11,9 +11,10 @@
         if(mysqli_num_rows($result)>0){
             header("Location:index.php?message=username+exists");
         }else{
+            $hash = password_hash($password, PASSWORD_DEFAULT);
             $sql2 = 
             "INSERT INTO `user` (`username`, `name`, `password`)
-             VALUES('$username', '$name', '$password');";
+             VALUES('$username', '$name', '$hash');";
 
             
 
